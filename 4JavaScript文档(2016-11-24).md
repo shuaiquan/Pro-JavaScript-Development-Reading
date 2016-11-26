@@ -20,9 +20,53 @@
     - [dox][2]
     - [YUIDoc][3]
 
+### **YUIDoc文档格式**
+- **YUIDoc**只读取文件中的**块级注释**
+```javascript
+/**
+*这一行将被读取
+*/
+
+/**
+*一个用于定义各种类型住宅（accommodation）的类
+*
+*@class Accommodation
+*@constructor
+*/
+
+/**
+*表示住宅当前是否上锁
+*
+*@property
+*/
+
+/**
+*为住宅解锁
+*
+*@method unlock
+*/
+```
+- [官方语法指南][4]
+    
 ### **使用YUIDoc创建一个文档网站**
+- 下载使用**YUIDoc**,它是基于nodejs的
+```javascript
+//下载
+npm install -g yuidocjs
+
+//执行,扫描当前目录和所有子目录
+yuidoc .
+
+//只扫描当前目录
+yuidoc -n .
+```
 ### **Markdown,更具表达性**
+- [文档][5]
+    - 直接百度就可以找到常用的语法，足够使用了
+
 
   [1]: http://usejsdoc.org/
   [2]: https://github.com/tj/dox
   [3]: http://yui.github.io/yuidoc/
+  [4]: http://yui.github.io/yuidoc/syntax
+  [5]: http://daringfireball.net/projects/markdown
