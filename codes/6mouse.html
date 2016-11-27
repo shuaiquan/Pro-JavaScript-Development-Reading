@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>与鼠标相关的位置属性</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html, body {
+			width: 100%;
+			height: 100%;
+		}
+		body {
+			position: relative;
+		}
+		.mouseArea {
+			position: absolute;
+			top: 50px;
+			left: 100px;
+			width: 180px;
+			height: 180px;
+			padding: 20px;
+			background-color: yellow;
+
+			cursor: pointer;
+		}
+		.show-info {
+			position: absolute;
+			top: 50px;
+			left: 400px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="mouseArea">
+		<p>这个区域绑定绑定有鼠标移动时间</p>
+		<br>
+		<p>宽：180，长：180，内边距：20</p>
+	</div>
+	<div class="show-info">
+		
+	</div>
+	<script>
+		window.onload = function(){
+			div = document.getElementsByClassName('mouseArea')[0];
+			show = document.getElementsByClassName('show-info')[0];
+
+			div.onmousemove = function(e){
+				console.log(e);
+
+				show.innerHTML = 'screen, x:'+e.screenX + ' y: '+ e.screenY+ '<br><br>' + 'page, x:'+e.pageX + ' y: '+ e.pageY+ '<br><br>' + 'layer, x:'+e.layerX + ' y: '+ e.layerY+ '<br><br>' +'offset, x:'+e.offsetX + ' y: '+ e.offsetY+ '<br><br>' +'client, x:'+e.clientX + ' y: '+ e.clientY+ '<br><br>';
+			}
+		}
+	</script>
+</body>
+</html>
