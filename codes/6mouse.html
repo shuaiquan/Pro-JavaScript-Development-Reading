@@ -12,8 +12,16 @@
 			width: 100%;
 			height: 100%;
 		}
-		body {
+		.hold {
+			height: 1000px;
+		}
+		.father {
 			position: relative;
+			top: 20px;
+			left: 20px;
+			width: 400px;
+			height: 300px;
+			border: 5px solid #eee;
 		}
 		.mouseArea {
 			position: absolute;
@@ -28,18 +36,24 @@
 		}
 		.show-info {
 			position: absolute;
-			top: 50px;
+			top: 1050px;
 			left: 400px;
 
 		}
 	</style>
 </head>
 <body>
-	<div class="mouseArea">
-		<p>这个区域绑定绑定有鼠标移动时间</p>
-		<br>
-		<p>宽：180，长：180，内边距：20</p>
+	<div class="hold">
+		<p>这里有1000px高的占位元素，请往下滑</p>
 	</div>
+	<div class="father">
+		<div class="mouseArea">
+			<p>这个区域绑定绑定有鼠标移动时间</p>
+			<br>
+			<p>宽：180，长：180，内边距：20</p>
+		</div>
+	</div>
+	
 	<div class="show-info">
 		
 	</div>
