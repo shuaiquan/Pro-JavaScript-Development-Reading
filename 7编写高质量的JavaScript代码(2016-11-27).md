@@ -26,12 +26,13 @@ npm install -g jslint
 //使用
 jslint *.js
 ```
-
+- 体验：在不设置的前提下，警告错误多到你怀疑人生，而且个人感觉下面的Options选项比较难懂（是我英文太差了吗？！），不去仔细研究一下的话，还是不太友好的。（附上一张截图）
+- ![jslint测试][4]
 
 #### **2. JSHint**
 - 其实是JSLint原始代码的一个分支（从名字上也可以猜一猜），用法几乎相同，更偏重于语法检查。
-- [官网][4]
-- [在线文档][5]
+- [官网][5]
+- [在线文档][6]
 - 提示，这个有sublime的插件哦
 - node使用
 ```
@@ -40,23 +41,30 @@ npm install -g jshint
 //使用
 jshint *.js
 ```
+- 体验：界面这个高端。。一下还不知道怎么用（摊手），然后提示的话就比较友好啦，实用！！（不过有3个警告，后两个我不服！付截图）
+- ![jshint测试][7]
 
 #### **3. Google Closure Compiler和Closure Linter**
 - 这个后续会有详细介绍，这里简单说一下。
 - 这个的特点是对编码风格，做了规范，具体了解了以后来补充
+- 体验：不敢说什么，默默的放一张截图
+- ![Closure Compiler][8]
 
 ### **JavaScript中的单元测试**
 - 书上提到的单元测试框架有**QUnit, Mocha, Jasmine**
-- [QUnit][6]
-- [Mocha][7]
-- [Jasmine][8]
+- [QUnit][9]
+- [Mocha][10]
+- [Jasmine][11]
 
 
   [1]: http://jslint.com/
   [2]: http://jslint.com/lint.html
   [3]: https://github.com/reid/node-jslint
-  [4]: http://jshint.com
-  [5]: http://jshint.com/docs/options
-  [6]: http://qunitjs.com
-  [7]: http://visionmedia,github.io/mocha/
-  [8]: http://pivotal.github.io/jasmine/
+  [4]: https://raw.githubusercontent.com/rayshuai/Pro-JavaScript-Development-Reading/master/images/6/jslint.png
+  [5]: http://jshint.com
+  [6]: http://jshint.com/docs/options
+  [7]: https://raw.githubusercontent.com/rayshuai/Pro-JavaScript-Development-Reading/master/images/6/jshint.png
+  [8]: https://raw.githubusercontent.com/rayshuai/Pro-JavaScript-Development-Reading/master/images/8/closure.png
+  [9]: http://qunitjs.com
+  [10]: http://visionmedia,github.io/mocha/
+  [11]: http://pivotal.github.io/jasmine/

@@ -33,7 +33,9 @@
 - 提示三种工具：
 1. 缩编：**JSMin** 支持node
 2. 混淆：**UglifyJS** 支持node
+    - ![UglifyJS][1]
 3. 编译：**Google Closure Compiler**
+    - ![Google Closure Commpiler][2]
 
 #### **4. 使用匿名，自执行的函数闭包来减少全局变量**
 ```javascript
@@ -70,3 +72,7 @@ function loadScript(src, onload){
     document.body.appendChild(scriptTag);
 }
 ```
+
+
+  [1]: https://raw.githubusercontent.com/rayshuai/Pro-JavaScript-Development-Reading/master/images/8/uglifyjs.png
+  [2]: https://raw.githubusercontent.com/rayshuai/Pro-JavaScript-Development-Reading/master/images/8/closure.png
