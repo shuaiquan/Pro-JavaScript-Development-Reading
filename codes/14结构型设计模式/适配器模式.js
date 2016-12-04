@@ -1,25 +1,3 @@
-﻿# 结构型设计模式(2016/12/04)
-
-标签（空格分隔）： 前端 js
-
----
-
-> 在创建型设计模式中，主要侧重于对象创建的处理。今天的内容继续学习设计模式，结构型设计模式。
-
----
-
-### **结构型设计模式**
-> 结构型设计模式有助于把多个对象整合为一个更大型、更有组织性的代码库。它们具有灵活性、可维护性、可扩展性，并能保证当系统中的某一部分发生变更时，不必完全重写其余部分进行适应。还可以帮助我们与其他代码结构实现对接。
-
-- 下面我们将会学到8种结构型的设计模式：
-
---- 
-
-#### **1. 适配器模式**
-- 应用场景：
-    - 当需要把不同的代码进行关联，否则这些代码无法兼容在一起工作时，使用适配器模式最为合适
-    - 当某个外部的API进行了更新时，可以创建一个适配器来映射各新方法至旧方法，以避免更改依赖这些方法的其余代码
-```
 //假设以下接口深藏在你庞大的代码库中，用于通过HTTP发出Ajax请求
 var http = {
 	//发起请求
@@ -126,49 +104,3 @@ http.makeRequest('get', '/user/12345', function(response){
 http.makeRequest('post', '/user/12345', function(response){
 	console.log('已经收到响应');
 }, 'name=quan&pass=1234');
-```
-
-#### **2. 组合模式**
-> **组合模式**为一个或多个对象创建了一个接口，使终端用户不需要知道他们所处理对象的个数。
-
-> 如果不希望那些正与你的方法进行交互的开发者操心需要传入多少个对象作为参数，使用组合模式最为合适，这样可以简化方法的调用
-```
-var elemet = {
-	//定义一个通过标签获取元素的方法。如果只有一个元素则返回一个，多个，就返回一个数组
-	get: function(tag){
-		var elems = document.getElementsByTagName(tag),
-			i = 0,
-			length = elems.length,
-			output = [];
-
-		for(; i<length; i++){
-			output.push(elems[i]);
-		}
-
-		return output.length === 1 ? output[0] : output;
-	},
-
-	//定义一个组合方法，传入一个或者多个元素都可以实现
-	addClass: function(elems, newClassName){
-		var i = 0,
-			length = elems.length,
-			elem;
-
-		//判断传入的元素是一个单独的对象还是数组
-		if(Object.prototype.toString.call(elems) === '[Object Array]'){
-
-			for(; i<length; i++){
-				elem = elems[i];
-				elem.className += (elem.className === '' ? '' : ' ') + newClassName;
-			}
-		}else{
-			elems.className += (elem.className === '' ? '' : ' ') + newClassName;
-		}
-	}
-}
-```
-#### **3. 装饰模式**
-#### **4. 外观模式**
-    
-
-
