@@ -58,6 +58,6 @@
 	observer.subscribe('ajax-response', function(response){
 		thankYouMessage.innerHTML = '提交成功，以收到响应';
 		form.parentNode.appendChild(thankYouMessage);
-	})
+	});
 
 }(observer));
