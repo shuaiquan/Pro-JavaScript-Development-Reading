@@ -206,4 +206,5 @@ var Promise = (function(){
 	};
 
 	return Promise;
+
 }());
