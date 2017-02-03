@@ -71,9 +71,42 @@ window.addEventListener('load', function(){
 - 如果在较新的浏览器中，可以检查**DOMContentLoaded事件**。该事件会在文档完全载入并解析后触发，不会等待样式文件，图片文件，子框架页面的加载。
 
 ## **获取元素内容**
-## **使用元素特性**
-## **修改DOM**
+- DOM元素都可能包含三种内容：文本，元素，文本和元素。
+###　**获取元素的文本内容**
+- **innerText**：非mozilla浏览器
+- **elem.firstChild.nodeValue**：全部浏览器
+- **textContent**：一个节点及其内部节点的文本内容
+### **获取元素的HTML**
+- **innerHTML**：执行速度快，但有以下问题：
+    - 在IE8以及更低的版本中，返回的元素都是大写的
 
+
+## **使用元素特性**
+### **特性数组**
+- **elem.attributes**
+- 一般特性值的获取与设置：
+    - **getAttribute()**
+    - **setAttribute()**
+
+## **修改DOM**
+- 修改DOM的三个步骤：
+    - 创建一个新的元素
+    - 将创建的新元素插入DOM
+    - 删除元素
+- **创建DOM节点**：
+    - **createElement()**：接收一个元素的标签名做参数，返回该元素对应的虚拟DOM描述
+- **插入DOM**
+    - **insertBefore**：在当前节点的某个子节点之前在插入一个子节点
+        - 示例：
+        ```
+        parentElement.insertBefore(newElement, referenceElement);
+        
+        newElement为要插入新节点
+        ```
+    - **appendChild**：将新节点添加到指点节点的子节点的末尾
+- **删除DOM**
+    - **removeChild**：从父节点中移除指定的子节点
+                
 
   [1]: http://itbilu.com/javascript/js/Ny3B0ddWg.html
   [2]: https://raw.githubusercontent.com/rayshuai/Pro-JavaScript-Development-Reading/master/images/42DOM/DOM.png
