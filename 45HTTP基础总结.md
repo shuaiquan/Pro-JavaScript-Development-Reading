@@ -7,7 +7,7 @@
 ## **什么是HTTP**
 - **HTTP**（Hypertext Transfer Protocol）,即**超文本传输协议**。一般用来在网络中进行文档，图片，音频和视频等**数据资源**的**传输**。
 - **HTTP协议**是一种**无状态**的，**应用层**协议：
-    - 无状态是指：每一个请求都是独立的。
+    - 无状态是指：每一个请求都是独立的，不同的请求之间没有关联。
     - 应用层：如下图中HTTP所在的网络中的位置![此处输入图片的描述][1]
 
 ## **工作方式**
@@ -65,10 +65,91 @@
 ```
 - [参考文档][5]
     
-
+## **HTTP消息结构**
+### **HTTP消息结构概览**
+- HTTP消息分为**Request**消息和**Response**消息两种
+- **Request**和**response**都由三部分构成：
+```
+1. start-line 开始行
+2. header 消息头（一个或多个）
+3. body 消息体
+```
+#### **开始行**
+- **start-line**分为两种：
+```
+1. Request-Line: "METHOD/path-to-resource http-version"
+2. Response-Line: "http-version status-code message"
+```
+#### **消息头**
+- **header**消息头，有一下三种：
+```
+1. general header
+2. entity header
+3. request/response header
+```
+##### **General Headers**
+- **general headers**消息头就是可以被request和response共有的消息头：
+```
+Cache-Control   指定请求或响应的缓存机制
+Connection  指定与连接有关的选项
+Date    日期和时间标志
+Pragma  
+Trailer
+Transfer-Encoding   对报文采用的编码方式
+Upgrade
+Via
+```
+##### **Entity Headers**
+- **entity headers**描述消息体（body）的消息头
+```
+Allow                    
+Content-Encoding  
+Content-Language  
+Content-Length    
+Content-Location  
+Content-MD5       
+Content-Range     
+Content-Type      
+Expires           
+Last-Modified
+```
+##### **Request Headers**
+```
+request-header = Accept                   
+               | Accept-Charset    
+               | Accept-Encoding   
+               | Accept-Language   
+               | Authorization     
+               | Expect            
+               | From              
+               | Host              
+               | If-Match          
+               | If-Modified-Since 
+               | If-None-Match     
+               | If-Range          
+               | If-Unmodified-Since
+               | Max-Forwards       
+               | Proxy-Authorization
+               | Range              
+               | Referer            
+               | TE                 
+               | User-Agent
+```
+##### **Response Headers**
+```
+response-header = Accept-Ranges
+                | Age
+                | ETag              
+                | Location          
+                | Proxy-Authenticate
+                | Retry-After       
+                | Server            
+                | Vary              
+                | WWW-Authenticate
+```
 
   [1]: http://img.blog.csdn.net/20151103145115996
-  [2]: http://upload-images.jianshu.io/upload_images/2964446-5a35e17f298a48e1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&_=5984001
+  [2]: http://img.blog.csdn.net/20151103151532193
   [3]: https://yq.aliyun.com/articles/5892
   [4]: http://img.blog.csdn.net/20151103151235371
   [5]: http://www.opsschool.org/en/latest/http_101.html
